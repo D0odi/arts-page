@@ -1,0 +1,74 @@
+/* Base styles */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars */
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.7rem;
+  max-width: 80vw;
+  margin: 0 auto;
+  height: 100vh;
+
+  max-width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 120px;  /* 10% of the viewport width */
+  height: 120px;  /* 5% of the viewport height */
+}
+
+.main-content {
+
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer 10+ */
+}
+
+.sidebar button {
+  font-size: 1rem;
+  cursor: pointer;
+  color: black;
+  background: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  scroll-margin-top: 1vh;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: 3fr 1fr; /* Changes to 1 column layout */
+  }
+  .sidebar,
+  .main-content {
+    padding-top: 4vh;
+  }
+}
+
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
